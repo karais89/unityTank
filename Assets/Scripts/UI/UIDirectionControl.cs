@@ -13,7 +13,7 @@ public class UIDirectionControl : MonoBehaviour
         m_RelativeRotation = transform.parent.localRotation;
     }
 
-
+	// not rotation canvas
     private void Update()
     {
         if (m_UseRelativeRotation)

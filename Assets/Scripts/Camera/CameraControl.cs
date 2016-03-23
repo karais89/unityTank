@@ -17,7 +17,7 @@ public class CameraControl : MonoBehaviour
     private void Awake()
     {
         m_Camera = GetComponentInChildren<Camera>();
-    }
+	}
 
 
     private void FixedUpdate()
@@ -64,7 +64,7 @@ public class CameraControl : MonoBehaviour
         m_Camera.orthographicSize = Mathf.SmoothDamp(m_Camera.orthographicSize, requiredSize, ref m_ZoomSpeed, m_DampTime);
     }
 
-
+	// y = size, x = size * aspect
     private float FindRequiredSize()
     {
         Vector3 desiredLocalPos = transform.InverseTransformPoint(m_DesiredPosition);
